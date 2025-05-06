@@ -1,0 +1,68 @@
+@import "tailwindcss";
+@import "@nuxt/ui";
+
+@theme {
+  /* Color */
+  --color-main-text: #92bee0;
+  --color-main-bg-dark: #0d1224;
+  --color-main-bg-secondary-dark: #111;
+  --color-main-bg-tertiary: #171717;
+  --color-main-bg-white: #f2f3f4;
+  --color-border: #333;
+  --color-primary: #3b82f6;
+  --color-secondary: #7928ca;
+  --color-accent: #79ffe1;
+
+  --color-dark-primary: #60a5fa;
+  --color-dark-secondary: #7928ca;
+  --color-dark-accent: #79ffe1;
+
+  /* Shadow */
+  --shadow-custom: 0 4px 14px rgba(0, 0, 0, 0.1);
+  --shadow-custom-dark: 0 4px 14px rgba(0, 0, 0, 0.25);
+
+  /* Animate */
+  --animate-bling: bling 1s ease-out infinite alternate-reverse;
+  --animate-morph: morph 8s ease-in-out infinite;
+  --animate-pulse: pulse 10s infinite;
+
+  @keyframes bling {
+    0% {
+      opacity: 0.5;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @keyframes morph {
+    0%,
+    100% {
+      border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    }
+    50% {
+      border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+    }
+  }
+
+  @keyframes pulse {
+    0%,
+    100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.05);
+    }
+  }
+}
+
+@utility hover-card {
+  transition: all 300ms;
+  &:hover {
+    transform: translateY(-0.25rem);
+  }
+}
+
+.body {
+  scroll-behavior: smooth;
+}
